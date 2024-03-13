@@ -1,12 +1,7 @@
-// Описаний у документації
-import SimpleLightbox from "simplelightbox";
-// Додатковий імпорт стилів
-import "simplelightbox/dist/simple-lightbox.min.css";
 
-const lightbox = new SimpleLightbox('.gallery a', { /* options */ });
-function imgTemlate({ previewURL, downloads, views, likes, comments }) {
+function imgTemlate({ previewURL, downloads, views, likes, comments, largeImageURL }) {
     return `            <li class="card-item">
-        <a href="${previewURL}"><img class="card-img" src="${previewURL}" alt="" title="" /></a>
+        <a href="${largeImageURL}"><img class="card-img" src="${previewURL}" alt="" title="" /></a>
         <div>
           <span class="description">
             <p class="card-title">
